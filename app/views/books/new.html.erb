@@ -1,0 +1,12 @@
+<%= form_with model: @book, local: true do |form|%>
+		<p><%= form.label :title%><br>
+		<%= form.text_field :title%></p>
+
+		<p><%= form.label :page_numbers%><br>
+		<%= form.text_field :page_numbers%></p>
+
+		<p><%= form.label :dewey_decimal%><br>
+		<%= form.text_field :dewey_decimal%></p>
+
+		<p><%= form.submit%></p>
+<%end%>
