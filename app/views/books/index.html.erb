@@ -3,6 +3,6 @@
 <ul>
   <% @books.each do |book| %>
   <li><strong><%= link_to(book.title, book_path(book)) %></strong></li>
- 
+ 		<small><%= link_to("destroy!", book_path(book), method: :delete, data: {confirm: "Are you sure?"}) %></small>
   <% end %>
 </ul>
