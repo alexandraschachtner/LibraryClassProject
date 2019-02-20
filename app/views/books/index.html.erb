@@ -4,5 +4,7 @@
   <% @books.each do |book| %>
   <li><strong><%= link_to(book.title, book_path(book)) %></strong></li>
  		<small><%= link_to("destroy!", book_path(book), method: :delete, data: {confirm: "Are you sure?"}) %></small>
+    <small><%= link_to("edit", edit_book_path(book)) %></small>
+    <small><%= link_to("new", new_book_path(book)) %></small>
   <% end %>
 </ul>
